@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>David Ren</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <img src="portrait.jpg" alt="David Ren">
+        <div class="bio">
+            <h2>About Me</h2>
+            <p>
+                Hi, I'm <a href="https://www.linkedin.com/in/davidyren/">David Ren!</a>
+                I'm a passionate junior Data Science student at the University of Michigan. My interests lie in Machine Learning, Artificial Intelligence, and Data Analytics, and I'm looking for an internship for Summer 2025.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>‎</p>
+        <div class="project-list">
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>YoLO Model Analysis</h3>
+                    <span class="location">ASTRI, Aug 2024</span>
+                </div>
+                <p>Evaluates the efficacy of YoLO models by calculating predictions' intersections over unions using Python, Pytorch, and YoLO.</p>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>3D Maze Solver</h3>
+                    <span class="location">EECS 281, Sep 2024</span>
+                </div>
+                <p>DFS and BFS algorithm for solving 3D mazes that uses getopt_long, deques, the C++ STL, and file redirection.</p>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>AutoWater</h3>
+                    <span class="location">ENGR 100, Apr 2024</span>
+                </div>
+                <p>Designed, coded, and built a solar-powered automatic plant waterer from scratch using Arduino and TinkerCAD.</p>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Piazza Classifier</h3>
+                    <span class="location">EECS 280, Mar 2024</span>
+                </div>
+                <p>Machine learning algorithm using Naive Bayes classifier that predicts the topics of Piazza posts using C++ with 87% success rate.</p>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Tiktok Reddit Video Generator</h3>
+                    <span class="location">Michigan Data Science Team, Apr 2024</span>
+                </div>
+                <p>Automatic creation of short TikTok "brainrot" videos using Python, Reddit, Beautiful Soup, and gTTS.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/davidyren/">LinkedIn</a> or <a href="https://github.com/snootdoots">GitHub</a>!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
