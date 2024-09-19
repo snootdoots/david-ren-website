@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>David Ren</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -17,54 +20,75 @@
     </nav>
 
     <section id="about">
-        <img src="portrait.jpg" alt="David Ren">
-        <div class="bio">
-            <h2>About Me</h2>
-            <p>
-                Hi, I'm <a href="https://www.linkedin.com/in/davidyren/">David Ren!</a>
-                I'm a passionate junior Data Science student at the University of Michigan. My interests lie in Machine Learning, Artificial Intelligence, and Data Analytics, and I'm looking for an internship for Summer 2025.
-            </p>
+        <div class="about-container">
+            <img src="images/portrait.jpg" alt="David Ren" class="profile-pic">
+            <div class="bio">
+                <h2>About Me</h2>
+                <p>
+                    Hi, I'm <a href="https://www.linkedin.com/in/davidyren/">David Ren!</a>
+                    I'm a passionate junior Data Science student at the University of Michigan. My interests lie in Machine Learning, Artificial Intelligence, and Data Analytics. I'm currently seeking an internship for Summer 2025—let's connect!
+                </p>
+            </div>
         </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <p>‎</p>
         <div class="project-list">
-            <div class="project-item">
+            <div class="project-item has-modal" onclick="openModal('astriModal')">
                 <div class="project-header">
                     <h3>YoLO Model Analysis</h3>
                     <span class="location">ASTRI, Aug 2024</span>
                 </div>
-                <p>Evaluates the efficacy of YoLO models by calculating predictions' intersections over unions using Python, Pytorch, and YoLO.</p>
+                <p>Created YoLO model in collaboration with MTR Corporation and model evaluator using Python, Pytorch, and YoLO.</p>
             </div>
             <div class="project-item">
                 <div class="project-header">
                     <h3>3D Maze Solver</h3>
                     <span class="location">EECS 281, Sep 2024</span>
                 </div>
-                <p>DFS and BFS algorithm for solving 3D mazes that uses getopt_long, deques, the C++ STL, and file redirection.</p>
+                <p>DFS and BFS algorithm for solving 3D mazes using getopt_long, deques, the C++ STL, and file redirection.</p>
             </div>
-            <div class="project-item">
+            <div class="project-item has-modal" onclick="openModal('autoWaterModal')">
                 <div class="project-header">
                     <h3>AutoWater</h3>
                     <span class="location">ENGR 100, Apr 2024</span>
                 </div>
-                <p>Designed, coded, and built a solar-powered automatic plant waterer from scratch using Arduino and TinkerCAD.</p>
+                <p>Solar-powered automatic plant waterer with moisture sensor, weight sensor, and bluetooth integration using Arduino.</p>
             </div>
             <div class="project-item">
                 <div class="project-header">
                     <h3>Piazza Classifier</h3>
                     <span class="location">EECS 280, Mar 2024</span>
                 </div>
-                <p>Machine learning algorithm using Naive Bayes classifier that predicts the topics of Piazza posts using C++ with 87% success rate.</p>
+                <p>Machine learning algorithm using Naive Bayes in C++ that predicts the topics of Piazza posts with an 87% success rate.</p>
             </div>
             <div class="project-item">
                 <div class="project-header">
                     <h3>Tiktok Reddit Video Generator</h3>
                     <span class="location">Michigan Data Science Team, Apr 2024</span>
                 </div>
-                <p>Automatic creation of short TikTok "brainrot" videos using Python, Reddit, Beautiful Soup, and gTTS.</p>
+                <p>Automatic short-from TikTok "brainrot" videos generator pipeline using Python, Reddit, Beautiful Soup, and gTTS.</p>
+            </div>
+        </div>
+
+        <div id="astriModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('astriModal')">&times;</span>
+                <h2>YoLO Model Analysis</h2>
+                <img src="images/astri.png" alt="ASTRI Proposal" class="modal-image">
+                <p> This project was a collaboration with the MTR Corporation, where we were asked to create a YoLO model that detects exit stairs from train cameras.
+                    I also created a script that evaluates the efficacy of YoLO models by calculating predictions' intersections over unions using Python, Pytorch, and YoLO.</p>
+            </div>
+        </div>
+        <div id="autoWaterModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('autoWaterModal')">&times;</span>
+                <h2>AutoWater</h2>
+                <img src="images/autowater.jpg" alt="AutoWater Project" class="modal-image">
+                <p>In this project, I designed and built a solar-powered automatic plant waterer from scratch using Arduino and TinkerCAD. 
+                    The device uses moisture sensors to determine when to water the plant, weight sensors to determine when the tank needs more water, and a bluetooth device to notify the user when the water needed to be refilled.
+                    This would ensure that they receive the right amount of water without human intervention.</p>
             </div>
         </div>
     </section>
@@ -74,15 +98,15 @@
         <form action="submit_form.php" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required placeholder="Name">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required placeholder="Email">
             </div>
             <div class="form-group">
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" required placeholder="Message"></textarea>
             </div>
             <button type="submit">Send</button>
         </form>
