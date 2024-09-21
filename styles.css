@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 /* Body styles */
@@ -15,6 +16,9 @@ body {
 
 #about {
     background-color: #F9F6EE;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
 }
 
 /* About section container */
@@ -34,11 +38,12 @@ body {
     border-radius: 50%;
     margin-right: 50px; /* Space between image and text */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .profile-pic:hover {
-    transform: scale(1.2);
+    content: url('images/nerd.png'); 
+    transform: scale(1.5);
 }
 
 /* Bio text */
@@ -108,6 +113,7 @@ section {
 
 /* Project item styles */
 .project-item {
+    position: relative;
     background-color: #F9F6EE; /* Light background */
     padding: 20px;
     border-radius: 10px;
@@ -133,7 +139,7 @@ section {
 }
 
 .project-item {
-    background-color: #F9F6EE; /* Light background */
+    background-color: #EBEAEC; /* Light background */
     padding: 15px; /* Padding inside each item */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
@@ -143,6 +149,23 @@ section {
     font-style: italic;
     color: #3C313D; /* Darker color */
     font-size: 1rem;
+}
+
+.project-header .language-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #3C313D; 
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#projects {
+    background-color: #F9F6EE; /* Match contact section's background */
 }
 
 /* Modal styles */
@@ -188,6 +211,46 @@ section {
     color: #55535B; /* Change color on hover */
 }
 
+/* Section styles */
+#classes {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Classes list styles */
+.class-list {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between items */
+    max-width: 1200px; /* Optional max width */
+    width: 100%; /* Full width */
+    padding: 0 20px; /* Padding for smaller screens */
+}
+
+/* Class item styles */
+.class-item {
+    position: relative;
+    background-color: #F9F6EE; /* Light background */
+    padding: 20px; /* Padding inside each item */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Class item text styles */
+.class-item {
+    color: #333; /* Text color */
+    font-size: 1.2rem; /* Font size */
+    text-align: center; /* Centered text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
 /* Footer styles */
 footer {
     background-color: #EBEAEC; /* Light background */
@@ -205,41 +268,32 @@ footer a:hover {
     color: #55535B; /* Slightly lighter color for hover */
 }
 
-/* Contact form styles */
 #contact {
-    background-color: #F9F6EE; /* Light background for contact section */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(253, 243, 243, 0.1);
-    width: 100%;
+    background-color: #F9F6EE; 
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #3C313D;
-    border-radius: 5px;
-    background-color: #EBEAEC; /* Light background */
-    color: #18141D; /* Dark text color */
-    transition: border 0.3s;
+.contact-icons {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 40px; /* Space between icons */
+    margin-top: 20px; /* Optional: space above the icons */
 }
 
-input:focus, textarea:focus {
-    border-color: #55535B; /* Change border color on focus */
+.contact-icon {
+    text-decoration: none; /* Remove underline */
+    color: #3C313D; /* Dark text color */
+    font-size: 3rem; /* Increase icon size */
+    display: flex;
+    flex-direction: column; /* Stack icon and text */
+    align-items: center; /* Center text under icon */
+    transition: color 0.3s; /* Smooth color transition */
 }
 
-button {
-    background-color: #3C313D;
-    color: #EBEAEC;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s, transform 0.3s;
+.contact-icon:hover {
+    color: #55535B; /* Change color on hover */
 }
 
-button:hover {
-    background-color: #55535B;
-    transform: scale(1.05);
+.contact-icon i {
+    margin-bottom: 5px; /* Space between icon and text */
 }

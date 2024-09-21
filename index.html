@@ -9,19 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#classes">Classes</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <section id="about">
         <div class="about-container">
-            <img src="images/portrait.jpg" alt="David Ren" class="profile-pic">
+            <img src="images/portrait.jpg" class="profile-pic" alt="Profile Image">
             <div class="bio">
                 <h2>About Me</h2>
                 <p>
@@ -39,6 +42,7 @@
                 <div class="project-header">
                     <h3>YoLO Model Analysis</h3>
                     <span class="location">ASTRI, Aug 2024</span>
+                    <span class="language-tag">Python</span> <!-- Language Tag -->
                 </div>
                 <p>Created YoLO model in collaboration with MTR Corporation and model evaluator using Python, Pytorch, and YoLO.</p>
             </div>
@@ -46,6 +50,7 @@
                 <div class="project-header">
                     <h3>3D Maze Solver</h3>
                     <span class="location">EECS 281, Sep 2024</span>
+                    <span class="language-tag">C++</span> <!-- Language Tag -->
                 </div>
                 <p>DFS and BFS algorithm for solving 3D mazes using getopt_long, deques, the C++ STL, and file redirection.</p>
             </div>
@@ -53,6 +58,7 @@
                 <div class="project-header">
                     <h3>AutoWater</h3>
                     <span class="location">ENGR 100, Apr 2024</span>
+                    <span class="language-tag">Arduino</span> <!-- Language Tag -->
                 </div>
                 <p>Solar-powered automatic plant waterer with moisture sensor, weight sensor, and bluetooth integration using Arduino.</p>
             </div>
@@ -60,12 +66,14 @@
                 <div class="project-header">
                     <h3>Piazza Classifier</h3>
                     <span class="location">EECS 280, Mar 2024</span>
+                    <span class="language-tag">C++</span> <!-- Language Tag -->
                 </div>
                 <p>Machine learning algorithm using Naive Bayes in C++ that predicts the topics of Piazza posts with an 87% success rate.</p>
             </div>
             <div class="project-item">
                 <div class="project-header">
                     <h3>Tiktok Reddit Video Generator</h3>
+                    <span class="language-tag">Python</span> <!-- Language Tag -->
                     <span class="location">Michigan Data Science Team, Apr 2024</span>
                 </div>
                 <p>Automatic short-from TikTok "brainrot" videos generator pipeline using Python, Reddit, Beautiful Soup, and gTTS.</p>
@@ -93,24 +101,35 @@
         </div>
     </section>
 
+    <section id="classes">
+        <h2>Classes</h2>
+        <div class="class-list">
+            <div class="class-item">EECS 281: Data Structures and Algorithms</div>
+            <div class="class-item">EECS 280: Programming and Data Structures</div>
+            <div class="class-item">EECS 203: Discrete Math</div>
+            <div class="class-item">MATH 214: Applied Linear Algebra</div>
+            <div class="class-item">MATH 215: Multivariable and Vector Calculus</div>
+            <div class="class-item">MATH 425: Intro to Probability</div>
+        </div>
+    </section>    
+
     <section id="contact">
         <h2>Contact Me</h2>
-        <form action="submit_form.php" method="post">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required placeholder="Name">
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Message"></textarea>
-            </div>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+        <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/davidyren" target="_blank" class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+                <span></span>
+            </a>
+            <a href="https://github.com/snootdoots" target="_blank" class="contact-icon">
+                <i class="fab fa-github"></i>
+                <span></span>
+            </a>
+            <a href="mailto:davidren12345@gmail.com" class="contact-icon">
+                <i class="fas fa-envelope"></i>
+                <span></span>
+            </a>
+        </div>
+    </section>    
 
     <footer>
         <p>Connect with me on <a href="https://www.linkedin.com/in/davidyren/">LinkedIn</a> or <a href="https://github.com/snootdoots">GitHub</a>!</p>
