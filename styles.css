@@ -6,6 +6,10 @@
     
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Body styles */
 body {
     font-family: 'Roboto', sans-serif;
