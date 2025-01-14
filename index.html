@@ -38,21 +38,29 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-list">
+            <div class="project-item has-modal" onclick="openModal('insta485Modal')">
+                <div class="project-header">
+                    <h3>Instagram Clone</h3>
+                    <span class="location">EECS 485, Jan 2025</span>
+                    <span class="language-tag">Python</span> <!-- Language Tag -->
+                </div>
+                <p>Instagram clone with templated static site generator using Click and Jinja. <b>read more</b></p>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Banking Simulator</h3>
+                    <span class="location">EECS 281, Nov 2024</span>
+                    <span class="language-tag">C++</span> <!-- Language Tag -->
+                </div>
+                <p>Real-time banking simulation system with functionalities like wire transactions, transfers, and fraud checking.</p>
+            </div>
             <div class="project-item has-modal" onclick="openModal('astriModal')">
                 <div class="project-header">
                     <h3>YoLO Model Analysis</h3>
                     <span class="location">ASTRI, Aug 2024</span>
                     <span class="language-tag">Python</span> <!-- Language Tag -->
                 </div>
-                <p>YoLO model and custom evaluation pipeline using Python, Pytorch, and YoLO, in collaboration with the MTR Corporation.</p>
-            </div>
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>3D Maze Solver</h3>
-                    <span class="location">EECS 281, Sep 2024</span>
-                    <span class="language-tag">C++</span> <!-- Language Tag -->
-                </div>
-                <p>DFS and BFS algorithm for solving 3D mazes using getopt_long, deques, the C++ STL, and file redirection.</p>
+                <p>YoLO model and custom evaluation pipeline using Python, Pytorch, and YoLO, in collaboration with the MTR Corporation. <b>read more</b></p>
             </div>
             <div class="project-item has-modal" onclick="openModal('autoWaterModal')">
                 <div class="project-header">
@@ -60,7 +68,7 @@
                     <span class="location">ENGR 100, Apr 2024</span>
                     <span class="language-tag">Arduino</span> <!-- Language Tag -->
                 </div>
-                <p>Solar-powered automatic plant waterer with moisture sensor, weight sensor, and bluetooth integration using Arduino.</p>
+                <p>Solar-powered automatic plant waterer with moisture sensor, weight sensor, and bluetooth integration using Arduino. <b>read more</b></p>
             </div>
             <div class="project-item">
                 <div class="project-header">
@@ -68,7 +76,7 @@
                     <span class="location">EECS 280, Mar 2024</span>
                     <span class="language-tag">C++</span> <!-- Language Tag -->
                 </div>
-                <p>Machine learning algorithm using Naive Bayes in C++ that predicts the topics of Piazza posts with an 87% success rate.</p>
+                <p>Machine learning algorithm using Naive Bayes in C++ that predicts the topics of Piazza posts.</p>
             </div>
             <div class="project-item">
                 <div class="project-header">
@@ -80,13 +88,27 @@
             </div>
         </div>
 
+        <div id="insta485Modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('insta485Modal')">&times;</span>
+                <h2>insta485</h2>
+                <img src="images/insta485.png" alt="Showcase of insta485 web app" class="modal-image">
+                <p>
+                    This project was done for my EECS 485: Web Systems class, where I used HTML/CSS (Bootstrap) to create website templates, 
+                    Python (Click for CLI interface and Jinja for template behavior generation) to generate static site pages from JSON files with data, and 
+                    shell scripting to automatically clean up and generate files. In the future, I will work on adding client and server-side dynamic pages for backend support.
+                </p>
+            </div>
+        </div>
         <div id="astriModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('astriModal')">&times;</span>
                 <h2>YoLO Model Analysis</h2>
                 <img src="images/astri.png" alt="ASTRI Proposal" class="modal-image">
-                <p> This project was a collaboration with the MTR Corporation, where we were asked to create a YoLO model that detects exit stairs from train cameras.
-                    I also created a script that evaluates the efficacy of YoLO models by calculating predictions' intersections over unions using Python, Pytorch, and YoLO.</p>
+                <p>
+                    This project was a collaboration with the MTR Corporation, where we were asked to create a YoLO model that detects exit stairs from train cameras.
+                    I also created a script that evaluates the efficacy of YoLO models by calculating predictions' intersections over unions using Python, Pytorch, and YoLO.
+                </p>
             </div>
         </div>
         <div id="autoWaterModal" class="modal">
@@ -94,9 +116,11 @@
                 <span class="close" onclick="closeModal('autoWaterModal')">&times;</span>
                 <h2>AutoWater</h2>
                 <img src="images/autowater.jpg" alt="AutoWater Project" class="modal-image">
-                <p>In this project, I designed and built a solar-powered automatic plant waterer from scratch using Arduino and TinkerCAD. 
+                <p>
+                    In this project, I designed and built a solar-powered automatic plant waterer from scratch using Arduino and TinkerCAD. 
                     The device uses moisture sensors to determine when to water the plant, weight sensors to determine when the tank needs more water, and a bluetooth device to notify the user when the water needed to be refilled.
-                    This would ensure that they receive the right amount of water without human intervention.</p>
+                    This would ensure that they receive the right amount of water without human intervention.
+                </p>
             </div>
         </div>
     </section>
@@ -104,12 +128,17 @@
     <section id="classes">
         <h2>Classes</h2>
         <div class="class-list">
-            <div class="class-item">EECS 281: Data Structures and Algorithms</div>
-            <div class="class-item">EECS 280: Programming and Data Structures</div>
-            <div class="class-item">EECS 203: Discrete Math</div>
-            <div class="class-item">MATH 214: Applied Linear Algebra</div>
-            <div class="class-item">MATH 215: Multivariable and Vector Calculus</div>
+            <div class="class-item">EECS 281: DSA in C++</div>
+            <div class="class-item">EECS 280: OOP in C++</div>
+            <div class="class-item">EECS 485: Web Systems</div>
+            <div class="class-item">EECS 445: Machine Learning</div>
+            <div class="class-item">STATS 413: Regression Analysis</div>
             <div class="class-item">MATH 425: Intro to Probability</div>
+            <div class="class-item">EECS 203: Discrete Math</div>
+            <div class="class-item">MATH 214: Linear Algebra</div>
+            <div class="class-item">MATH 215: Multivariable Calculus</div>
+            <div class="class-item">PHIL 340: Morals of AI</div>
+            <div class="class-item">SOC 260: Social Dynamics</div>
         </div>
     </section>    
 
